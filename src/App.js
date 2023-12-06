@@ -1,5 +1,6 @@
 import './App.css';
 import PopperExample from '../src/componentes/popper';
+import TableroColor from './componentes/Boton_Color';
 
 function App(){
   return (
@@ -8,7 +9,8 @@ function App(){
       </div>
 
       <div className='contenedor-botones'>
-        <PopperExample />
+        <PopperExample miComponente={<TableroColor></TableroColor>}>
+        </PopperExample>
         <PopperExample />
         <PopperExample />
       </div>

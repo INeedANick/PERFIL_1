@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { usePopper } from 'react-popper';
+import TableroColor from './Boton_Color';
 
-const PopperExample = () => {
+const PopperExample = (props) => {
   const [referenceElement, setReferenceElement] = useState(null);
   const [popperElement, setPopperElement] = useState(null);
   const [visible, setVisible] = useState(false);
@@ -26,10 +27,10 @@ const PopperExample = () => {
       {visible && (
         <div
           ref={setPopperElement}
-          style={{ ...styles.popper, backgroundColor: '#fff', padding: '10px', border: '1px solid #ddd' }}
+          style={{ ...styles.popper, backgroundColor: 'rgb(100, 100, 100)', padding: '10px', border: '1px solid #ddd' }}
           {...attributes.popper}
         >
-          <p>Contenido del Popper</p>
+          <div>{props.miComponente}</div>
           <button onClick={closePopper}></button>
         </div>
       )}
